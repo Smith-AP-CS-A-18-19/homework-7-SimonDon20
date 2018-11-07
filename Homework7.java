@@ -1,10 +1,18 @@
+//Donovan Simonton
+
 public class Homework7 {
 
 	/* Use a while loop to add up the integers
 	 * from 1 to x and return the result
 	 */
 	public static int problem1(int x) {
-
+		int y = 0;
+		int i = 1;
+		while(i <= x) {
+			y += i;
+			i++;
+		}
+		return y;
 	}
 
 	/* Use a loop (while or for) to find the
@@ -14,7 +22,15 @@ public class Homework7 {
 	 * use that method, you must use a loop
 	 */
 	public static int problem2(String s, String t) {
-
+		int x = 0;
+		while(x <= s.length() - t.length()) {
+			String namedString = s.substring(x, t.length() + x);
+				if (namedString.equals(t)) {
+					return x;
+				}
+				x++;
+		}
+		return -1;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -22,7 +38,11 @@ public class Homework7 {
 	 * power
 	 */
 	public static int problem3(int a, int b) {
-
+		int base = a;
+		for(int i = 2; i <= b; i++) {
+				a *= base;
+		}
+		return a;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -30,7 +50,12 @@ public class Homework7 {
 	 * b (i.e., calculate a / b using a loop)
 	 */
 	public static int problem4(int a, int b) {
-
+		int dividing = 0;
+		while (a > b) {
+			a -= b;
+			dividing++;
+		}
+		return dividing;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -38,7 +63,10 @@ public class Homework7 {
 	 * (i.e., calculate a % b using a loop)
 	 */
 	 public static int problem5(int a, int b) {
-
+		 while(a > b) {
+			 a -= b;
+		 }
+		 return a;
 	 }
 
 	public static void main(String[] args) {
